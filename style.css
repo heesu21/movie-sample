@@ -1,80 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Gowun+Batang&family=Gowun+Dodum&display=swap');
 
-
-
 * {
-  font-family: "Gowun Dodum", sans-serif;
+  font-family: "Gothic A1", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: url("") center/cover no-repeat;
+  color: #fff;
   min-height: 100vh;
+  line-height: 1.6;
 }
 
 .card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5em;
+  padding: 2em;
 }
 
 .movie-card {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-  margin: 20px;
-  padding: 20px;
-  width: 300px;
-  justify-self: center;
-  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  margin: 0.5em;
+  background-color: rgba(24, 24, 24, 0.9);
   border-radius: 10px;
-  cursor: pointer;
-  user-select: none;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 1em;
+  color: #ccc;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
 }
 
 .movie-card img {
   width: 100%;
-  border-radius: 0px;
+  height: auto;
+  border-radius: 5px;
 }
 
 header {
-  background-color: white;
+  background-color: #000;
+  color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1em;
   align-items: center;
-  padding: 30px 0;
 }
 
 .search {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  border-bottom: 1px solid black;
+  background-color: #222;
+  padding: 1em;
 }
 
-.search label {
-  font-size: 25px;
+.search input, .search button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 0.75em;
+  border-radius: 5px;
 }
 
-.search input {
-  margin-left: 20px;
-  min-width: 200px;
-  padding: 5px 10px;
+.search input:focus, .search button:focus {
+  outline: none;
 }
 
-.search button {
-  margin-left: 10px;
-  padding: 5px;
+h1 {
+  font-size: 2em;
+  letter-spacing: -1px;
 }
 
-h3 {
-  margin-bottom: 10px;
-}
-
-.btn {
-  background-color: white;
-  color: black;
-  padding: 5px;
-
+.movie-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
